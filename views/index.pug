@@ -13,3 +13,8 @@ html(lang="en")
         li 
           a(href="/about") About
     h1 BLOG
+    each article, index in articles
+      ul
+        li= article.title
+        li= article.description
+        li= article.createdAt.toLocaleDateString()

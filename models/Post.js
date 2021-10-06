@@ -6,7 +6,7 @@ const Post = new Schema({
   image: String,
   createdAt: {
     type: Date,
-    default: `${Date.getFullYear()}/${Date.getMonth()}/${Date. getDate()}`
+    default: new Date()
   },
   description: String
 })
