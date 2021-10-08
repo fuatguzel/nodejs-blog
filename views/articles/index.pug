@@ -16,9 +16,9 @@ html(lang="en")
           a(href="/about", class="nav-link") About
     .container
       h1 BLOG
-      a.btn.btn-success(href="/articles/new") New
+      a.btn.btn-info.mb-3(href="/articles/new") New
       each article, index in articles
-        .card
+        .card.border-dark.my-3 
           img(src=`${article.image}`, alt="article-image")
           .card-body 
             h5.card-title= article.title

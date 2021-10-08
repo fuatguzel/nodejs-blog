@@ -17,9 +17,9 @@ html(lang="en")
     .container
       h1= article.title 
       h6= article.createdAt.toLocaleDateString()
-      a(href=`/articles/edit/${article.slug}`, class="btn btn-warning",
+      a(href=`/articles/edit/${article.id}`, class="btn btn-warning",
       ) Edit
       hr
-      p include markdown-it article.sanitizedHtml
+      p= article.sanitizedHtml
       //- img(src=`${article.image} ? ${article.image} || ''`, alt="article-image")
       

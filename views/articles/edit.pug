@@ -9,28 +9,31 @@ html(lang="en")
     integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
   body 
     .container
-      h1 Create New Article
-      form(action="/articles" method="POST")
+      h1 Edit The Article
+      form(action=`/articles/${article.id}?_method=PUT` method="POST")
         .form-group
           label(
             for="title"
             ) Title
-          input(type="text" id="title" name="title" class="form-control"
+          input(type="text" 
+          value=`${article.title}`
+          id="title" name="title" class="form-control"
           required)
         .form-group
           label(
             for="description" 
             ) Description   
           textarea(name="description", cols="30", rows="10"
-          id="description" class="form-control"
-          required)
+          id="description"
+          class="form-control"
+          required)= article.description
         .form-group
           label(
             for="markdown" 
             ) Markdown   
           textarea(name="markdown", cols="30", rows="10"
           id="markdown" class="form-control"
-          required)
+          required)= article.markdown
         a(
           class="btn btn-danger btn-lg btn-block"
           href="/"
@@ -38,5 +41,4 @@ html(lang="en")
         button(
           class="btn btn-primary btn-lg btn-block py-6"
           type="submit"
-            ) Save
-      
+        ) Save
