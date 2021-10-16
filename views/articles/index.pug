@@ -7,22 +7,22 @@ html(lang="en")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
     integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
     title Blog
-  body(style="background-color:#141414;")
-  .container() 
-    nav.navbar.navbar-dark.bg-dark
-      ul(class="navbar-nav mr-auto mt-2 mt-lg-0")
+  body(style="background-color:#282c35;")
+  .container(style="padding-top: 50px")
+    nav.navbar
+      ul(class="navbar-nav")
         li(class="navbar nav-item") 
-            a(href="/", class="nav-link") Home Page
+            a(href="/", class="nav-link" style="color:#D2D3C9;margin-right:10px;") Home Page
         li(class="navbar nav-item") 
-          a(href="/about", class="nav-link") About
+          a(href="/about", class="nav-link" style="color:#D2D3C9;margin-right:10px;") About
     .container
-      h1(style="color:#5F85DB;") BLOG
+      h1(style="color:#fff;") BLOG
       a.btn(href="/articles/new") New
       hr
       each article, index in articles
           .card-body
-            span.card-title(style="color: #85CFCB;float:left;")= article.title
-            span.card-text(style="margin-left:15px;color:#DBD8E3;")= article.description.substring(0,100)+"..."
+            span.card-title(style="color: #ffa7c4;float:left;font-size:18px")= article.title
+            span.card-text(style="margin-left:15px;color:#DBD8E3;")= article.description.substring(0,70)+"..."
             span(style="margin-left:15px;color:#5F85DB;")= article.createdAt.toLocaleDateString()
-            a.btn(href=`articles/${article.slug}`, style="float:right") Read More
+            a.btn(href=`articles/${article.slug}`, style="float:right; color: #80A7EF") Read More
             hr
