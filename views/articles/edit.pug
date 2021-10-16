@@ -8,7 +8,7 @@ html(lang="en")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
     integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
   body(style="background-color:#282c35;")
-    .container(style="padding-top: 50px")
+    .container(style="padding-top: 50px;")
       h1(style="color:#ffa7c4;") Edit The Article
       form(action=`/articles/${article.id}?_method=PUT` method="POST")
         .form-group
@@ -43,6 +43,7 @@ html(lang="en")
           style="color:#DA0037;"
             ) Cancel  
         button(
-          class="btn btn-primary py-6"
+          class="btn py-6"
           type="submit"
+          style="background-color:#011627;color:#fff;"
             ) Save
